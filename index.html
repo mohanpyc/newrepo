@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <style>
+     h2{
+         color: blueviolet;
+     }
+    </style>
+</head>
+<body> 
+  <div class="container">
+      <div class="row p-0 m-0">
+            <div class="col-lg-12 text-center p-0 m-0">
+                <h1 class="text-center p-3 m-0" style="color: blue;">Crud Operations</h1>
+            </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-4 mt-3 mb-3">
+              <h2 class="text-center mb-3">Form</h2>
+            <div class="formtag">
+                <form id="form_id" >
+                    <div class="form-group">
+                        <label for="userName">UserName</label>
+                        <input type="text" class="form-control" id="usrname">
+                        <div class="invalid-feedback">
+                            Please Enter a valid UserName
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="mail">
+                        <div class="invalid-feedback">
+                            Please Enter a valid mail
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone_no">Phone Number</label>
+                        <input type="number" class="form-control" id="phnum">
+                        <div class="invalid-feedback">
+                            Please Enter a valid phone number
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <label><input type="radio" value="female" name="gender" id="r1" >Female</label>
+                        <label><input type="radio" value="male" name="gender" id="r2" >Male</label>
+                       
+                    </div>
+                    <input type="button" class="btn btn-success" value="Submit" onclick="save()"> 
+                </form>
+            </div>
+          </div>
+          <div class="col-lg-8 mt-3">
+              <h2 class="text-center">Records</h2>
+                <table class="table table-striped custab">
+                        <tr>
+                            <th>Sr:No</th>
+                            <th>UserName</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Gender</th>
+                            <th>Action</th>
+                        </tr>
+                    <tbody id="tdata">
+
+                    </tbody>
+                </table>
+          </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="update_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">update form</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 ml-auto">
+                        <div class="formtag">
+                            <form id="form_id2">
+                                <div class="form-group">
+                                    <label for="userName">UserName</label>
+                                    <input type="text" class="form-control" id="usrname2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" id="mail2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone_no">Phone Number</label>
+                                    <input type="number" class="form-control" id="phnum2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <label><input type="radio" value="female" name="gender" id="r12">Female</label>
+                                    <label><input type="radio" value="male" name="gender" id="r22">Male</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal">close</button>
+                <button class="btn btn-success" data-dismiss="modal" onclick="newSave()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="from_data.js"></script>
+</body>
+</html>
